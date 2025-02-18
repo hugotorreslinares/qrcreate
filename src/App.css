@@ -102,11 +102,45 @@ input[type="text"] {
 .title-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 12px;
   margin-bottom: 1rem;
+  padding: 0 1rem;
 }
 
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-left: 12px;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+.user-welcome {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 .qr-icon {
   color: #4CAF50;
 }
@@ -151,4 +185,47 @@ input[type="text"] {
   color: #666;
   font-size: 0.9rem;
   border-top: 1px solid #eee;
+}
+.instructions {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.instructions h2 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.instructions ol {
+  color: #495057;
+  margin-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.instructions li {
+  margin-bottom: 0.5rem;
+}
+
+.control-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.control-item label {
+  margin-bottom: 0.5rem;
+  color: #495057;
+  cursor: help;
+}
+
+input[type="text"]::placeholder {
+  color: #adb5bd;
+  font-style: italic;
 }

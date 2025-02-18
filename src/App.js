@@ -13,6 +13,10 @@ function App() {
     setUser(userData);
   };
 
+  const handleLogout = () => {
+    setUser(null);
+  };
+
   return (
     <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
       <div className="App">
@@ -23,7 +27,7 @@ function App() {
             <GoogleAuth onLogin={handleLogin} />
           </div>
         ) : (
-          <QRCodeGenerator user={user} />
+          <QRCodeGenerator user={user} onLogout={handleLogout} />
         )}
       </div>
     </GoogleOAuthProvider>
