@@ -1,6 +1,9 @@
 .App {
   text-align: center;
   padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .qr-container {
@@ -107,13 +110,33 @@ input[type="text"] {
 .qr-icon {
   color: #4CAF50;
 }
-.App {
-  min-height: 100vh;
+
+.login-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   padding: 2rem;
+  background-color: #f5f5f5;
 }
 
+.google-auth {
+  margin-top: 2rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
 .qr-container {
   max-width: 600px;
   margin: 0 auto;

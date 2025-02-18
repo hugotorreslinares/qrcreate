@@ -6,12 +6,21 @@ A modern, user-friendly QR code generator built with React. Create customizable 
 
 ## Features
 
+- Google Authentication
 - Generate QR codes from any text or URL
 - Customize QR code size (128px to 512px)
 - Choose custom colors for QR code and background
 - Download QR codes as PNG files
 - Responsive design
 - Real-time QR code preview
+
+## Environment Variables
+
+The following environment variables are required:
+
+```env
+REACT_APP_GOOGLE_CLIENT_ID=your-google-client-id
+```
 
 ## Live Demo
 
