@@ -229,3 +229,53 @@ input[type="text"]::placeholder {
   color: #adb5bd;
   font-style: italic;
 }
+.login-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.login-header .qr-icon {
+  animation: bounce 2s infinite;
+}
+
+.login-description {
+  max-width: 400px;
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.login-description p {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.login-description ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.login-description li {
+  color: #495057;
+  margin: 0.8rem 0;
+  font-size: 1rem;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
