@@ -72,7 +72,7 @@ const QRCodeGenerator = ({ user, onLogout }) => {  // Added onLogout prop
           <li>Enter any text or URL in the input field below</li>
           <li>Adjust the QR code size (128px - 512px)</li>
           <li>Choose custom colors for background and QR code</li>
-          <li>Download your QR code as PNG</li>
+          <li>Download your QR code as PNG or SVG</li>
         </ol>
       </div>
 
@@ -133,9 +133,14 @@ const QRCodeGenerator = ({ user, onLogout }) => {  // Added onLogout prop
       </div>
 
       {text && (
-        <button className="download-button" onClick={downloadQRCode}>
-          Download QR Code
-        </button>
+        <div className="download-buttons">
+          <button className="download-button" onClick={() => downloadQRCode('png')}>
+            Download PNG
+          </button>
+          <button className="download-button svg" onClick={() => downloadQRCode('svg')}>
+            Download SVG
+          </button>
+        </div>
       )}
     </div>
   );
