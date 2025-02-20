@@ -55,7 +55,7 @@ const QRCodeGenerator = ({ user, onLogout }) => {  // Added onLogout prop
     <div className="qr-container">
       <div className="title-container">
         <MdQrCode size={32} className="qr-icon" />
-        <h1>Custom QR Code Generator</h1>
+        <h1>QR Code Generator</h1>
         <div className="user-welcome">
           Welcome, {user.name}
           <img src={user.picture} alt={user.name} className="user-avatar" />
