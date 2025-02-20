@@ -9,9 +9,23 @@ const QRCodeGenerator = ({ user, onLogout }) => {  // Added onLogout prop
   const [fgColor, setFgColor] = useState('#000000');
   const qrRef = useRef();
 
-  const downloadQRCode = () => {
+  const downloadQRCode = (format) => {
     try {
       const svg = qrRef.current.querySelector('svg');
+      
+      if (format === 'svg') {
+        const svgData = new XMLSerializer().serializeToString(svg);
+        const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+        const svgUrl = URL.createObjectURL(svgBlob);
+        const downloadLink = document.createElement('a');
+        downloadLink.href = svgUrl;
+        downloadLink.download = `qrcode_${Date.now()}.svg`;
+        downloadLink.click();
+        URL.revokeObjectURL(svgUrl);
+        return;
+      }
+
+      // Existing PNG download logic
       const svgData = new XMLSerializer().serializeToString(svg);
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');

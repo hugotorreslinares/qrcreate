@@ -279,3 +279,16 @@ input[type="text"]::placeholder {
     transform: translateY(-10px);
   }
 }
+.download-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.download-button.svg {
+  background-color: #2196F3;
+}
+
+.download-button.svg:hover {
+  background-color: #1976D2;
+}
